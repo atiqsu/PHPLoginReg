@@ -5,12 +5,14 @@
  */
 session_start();
 
-include 'db.php';
+require_once 'settings.class.php';
 
-include 'errorhandler.php';
+require_once 'settings.php';
 
-include 'registration.php';
+require_once 'db.php';
 
-include 'validator.php';
+require_once 'registration.php';
 
-include 'display.php';
+require_once 'display.php';
+
+require_once 'constant.php';

@@ -1,2 +1,2 @@
 <?php
-include 'inc/startup.php';
+require './inc/startup.php';

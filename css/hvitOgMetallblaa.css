@@ -1,0 +1,442 @@
+/* 
+    Document   : hvitOgMetallblaa
+    Created on : 07.jan.2011, 20:30:54
+    Author     : Thorben
+    Description:
+        Overstyrer de helt simple innstillingene i stil.css.
+        Dette er standardtemaet.
+*/
+
+
+body {
+    background-color: #F6F6F6;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #1F1F1F;
+    font-family: Ubuntu,Geneva, sans-serif;
+}
+
+.divider {
+    max-width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-top-color: #286A86;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-width: 1px;
+    padding: 0px;
+    padding-left: 5px;
+
+}
+
+.nav_topp {
+    background-image:url('img/top.png');
+    background-repeat:repeat-x;
+    width: 99%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    z-index: 1;
+    border-width: 0px;
+    margin: 0px;
+
+}
+
+.nav_topp_r {
+    position: absolute;
+    right: 0.5%;
+    top: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+
+}
+
+
+
+a:link {
+    color: #479FC4;
+}
+a:visited {
+    color: #276D8B;
+}
+
+
+
+a:link:hover {
+    color: #71C3E6;
+    text-decoration: none;
+}
+a:visited:hover {
+    color: #5F99B2;
+    text-decoration: none;
+}
+
+a:link.nav_current,
+a:visited.nav_current,
+a:hover.nav_current,
+a:visited:hover.nav_current {
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+        cursor: text;
+}
+
+a#ikkedeg {
+    font-size: 0.7em;
+}
+
+h1 {
+    font-family:verdana,sans-serif;
+    text-shadow: gray 0.05em 0.05em 0.2em
+}
+
+h4 {
+    font-size: 17px;
+}
+
+div.overskrift {
+    background-image: url('img/logo.png');
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 140px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+.overskrift h1 {
+
+    position: relative;
+    left: 318px;
+    top: 20px;
+    width: 700px;
+    max-width: 70%;
+    margin-right: 0px;
+
+}
+.overskrift p {
+    position: relative;
+    left: 318px;
+    margin-top: 30px;
+    width:700px;
+    max-width: 70%;
+
+}
+
+div.hoved_body {
+    margin-left: 0px;
+    padding-left: 0px;
+
+}
+
+
+div.hoved {
+    padding-left: 5px;
+    width: 60%;
+    margin: auto;
+    font-size: 0.8em;
+}
+
+div.side_beskjed {
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* tabeller */
+table.compoliste {
+    border-style: solid;
+    border-color: #2F4F4F;
+    border-width: 0px 0px 1px 1px;
+    padding: 0px;
+    margin: auto;
+
+    border-spacing: 0px;
+    border-collapse: collapse;
+
+    width: 80%;
+    font-size: 1.2em;
+
+}
+
+
+
+.compoliste tr {
+    margin: 0px;
+    padding: 0px;
+    
+
+    /* border-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-color: #2F4F4F;
+    border-width: 1px; */
+
+
+}
+
+.compoliste td, .compoliste thead tr  {
+    margin: 0px;
+    border-style: solid;
+    border-color: #2F4F4F;
+    border-width: 1px 1px 0px 0px;
+    padding-left: 2%;
+
+}
+
+.compoliste thead tr {
+    background-color: #2F4F4F;
+    color: white;
+
+
+}
+
+.compoliste tbody tr.status_open {
+    background-color: #CBFFCB;
+}
+
+
+.compoliste tbody tr.status_kjorer {
+    background-color: #FFCBCB;
+}
+
+
+.compoliste tbody tr.status_kjorer_open {
+    background-color: #CDE2B5;
+}
+
+.compoliste tbody tr.status_usikker {
+    opacity: 0.6;
+}
+
+
+.compoliste tbody tr.status_ferdig {
+    background-color: #ACACAC;
+}
+.compoliste tbody tr.status_ferdig td a {
+    color: #424242;
+}
+
+
+
+
+td.lenkecelle {
+    padding: 0px;
+    vertical-align:middle;
+
+}
+
+td.lenkecelle a {
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 10px 5px;
+}
+
+
+
+
+
+table.compoliste_crew,
+table.deltakerliste {
+    border-spacing: 0px;
+    border-collapse: collapse;
+
+    border-style: solid;
+    border-color: #545454;
+    border-width: 0px 0px 1px 1px;
+    padding: 0px;
+    margin: auto;
+    width: 100%;
+    font-size: 1.2em;
+
+}
+
+.compoliste_crew tr,
+.deltakerliste tr {
+    margin: 0px;
+    padding: 0px;
+}
+
+.compoliste_crew td, .compoliste thead tr,
+.deltakerliste td, .deltakerliste thead tr {
+    margin: 0px;
+    border-style: solid;
+    border-color: #545454;
+    border-width: 1px 1px 0px 0px;
+
+}
+
+.compoliste_crew thead tr,
+.deltakerliste thead tr {
+    background-color: #282828;
+    color: white;
+
+
+}
+
+.deltakerliste tbody tr td.deltaker_handlinger {
+    text-align: right;
+}
+
+
+
+
+/* status_feltet */
+div#statusfelt, .status {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 5px;
+    width: 98%;
+    margin: 4px;
+}
+div#statusfelt img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+div.status_advarsel {
+    border-color: #FFC96B;
+    background-color: #FFE8BF;
+}
+div.status_feil {
+    border-color: #C30000;
+    background-color: #FFC1C1;
+}
+div.status_info {
+    border-color: #3F4AE2;
+    background-color: #C1C6FF;
+}
+div.status_bra {
+    border-color: #00831A;
+    background-color: #ABE9B7;
+}
+
+div#footer {
+    width: 70%;
+    color: #777777;
+    font-size: 0.7em;
+    border-style: solid none none none;
+    border-color: #286A86;
+    border-width: 1px 0px 0px 0px;
+
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+    clear: both;
+}
+
+
+
+/* detalje-tabell */
+table.detaljer {
+    width: 440px;
+    float: left;
+    border-style: none;
+
+}
+table.detaljer thead tr th,
+h3 {
+    border-style: solid none none solid;
+    border-width: 3px 0px 0px 1px;
+    border-color: #2F4F4F;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+table.detaljer tbody tr th {
+    text-align: left;
+    width: 145px;
+    color: #545454;
+    font-weight: lighter;
+    vertical-align:top;
+}
+table.detaljer tbody tr td {
+    text-align:left;
+    width: 285px;
+    vertical-align:bottom;
+}
+/*table.detaljer tbody tr th,
+table.detaljer tbody tr td {
+    font-size: 1.2em;
+}*/
+
+div.pakrevd_deltakere {
+    border-style: solid;
+    border-color: #58ACFA;
+    border-width: 1px;
+    background-color: #A9D0F5;
+}
+
+
+div.oversikt_lenker {
+    width: 100%;
+}
+
+div.oversikt_lenker a {
+    display: block;
+    color: black;
+    font-size: 1.5em;
+    text-decoration: none;
+    opacity: 0.6;
+    height: 42px;
+    padding: 3px 0px 3px 0px;
+}
+div.oversikt_lenker a:hover {
+    opacity: 1;
+    color: black;
+}
+
+div.oversikt_lenker a img {
+    width: 40px;
+    height: 40px;
+    vertical-align:middle;
+}
+
+div.oversikt_lenker h2 {
+    clear: both;
+    font-family:sans-serif;
+    font-size: 1.75em;
+}
+
+
+
+
+
+img {
+    border-style: none;
+}
+
+
+#bread_crumbs {
+    font-size: 11px;
+    border-style: none;
+    padding: 1em;
+}
+
+#bread_crumbs img {
+    vertical-align: middle;
+}
+
+
+
+/* kontroll.php */
+.test_ja {
+    color: green;
+}
+.test_nei {
+    color: red;
+}
+.test_advarsel {
+    color: orange;
+}
+
+.halvt_usynlig {
+    color: gray;
+}
