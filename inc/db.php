@@ -4,7 +4,6 @@
  * 
  * @author Alexander Aasebø <alexander@aasebo.net>
  * @version 0.1
- * @TODO Expand features, easier fetching of rows
  */
 class db {
     /**
@@ -55,8 +54,6 @@ class db {
             $this->change_credentials($dsn, $dbuser, $dbpass, $options);
         }
         
-        
-        
     }
     /**
      * 
@@ -68,6 +65,7 @@ class db {
     }
     /**
      * Closes the database connection
+     * @return boolean
      */
     public function close_connection(){
         $this->PDO_ = null;
@@ -95,14 +93,15 @@ class db {
      * @return boolean 
      */
     public function change_credentials($dsn, $dbuser, $dbpass, $options = array()){
-        if ($dsn && $dbuser && $dbpass && $options){
+        if ($dsn && $dbuser && $dbpass && $options) {
             $this->dsn = $dsn;
             $this->dbuser = $dbuser;
             $this->dbpass = $dbpass;
             $this->options = $options;
             return true;
+        } else {
+            return false;
         }
-        else return false;
     }
     /**
      * prepares a SQL string for database insertion
@@ -121,10 +120,14 @@ class db {
     }
     
     /**
-     * Returns PDO object
+     * Returns true if PDO is created / False if not
+     * @return boolean True if connected, False is not
      */
     public function checkConnection(){
-        return $this->PDO_;
+        if(!$this->PDO_){
+            return false;
+        }
+        return true;
     }
 }
 

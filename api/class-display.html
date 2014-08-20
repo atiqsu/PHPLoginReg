@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class display | registration</title>
+
+	<script type="text/javascript" src="resources/combined.js?1644104381"></script>
+	<script type="text/javascript" src="elementlist.js?4158915924"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-db.html">db</a></li>
+				<li class="active"><a href="class-display.html">display</a></li>
+				<li><a href="class-registration.html">registration</a></li>
+				<li><a href="class-settings.html">settings</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class display</h1>
+
+
+	<div class="description">
+	
+<p>Description of the display object</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Author:</b>
+				alex<br />
+		<b>Located at</b> <a href="source-class-display.html#3-114" title="Go to source code">inc/display.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="nav" id="_nav">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_nav">#</a>
+		<code><a href="source-class-display.html#40-56" title="Go to source code">nav</a>( <span>string <var>$side</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a string which makes the link bold if it's where the user is. Use
+this with echo in a link, inside the tag</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a string which makes the link bold if it's where the user is. Use
+this with echo in a link, inside the tag</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$side</var></dt>
+					<dd><code>string</code><br>$side Page the link is pointing to.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Text that makes the link bold if it's where the user is, empty string if not.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createBreadCrumbs" id="_createBreadCrumbs">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createBreadCrumbs">#</a>
+		<code><a href="source-class-display.html#58-86" title="Go to source code">createBreadCrumbs</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="activateBC" id="_activateBC">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_activateBC">#</a>
+		<code><a href="source-class-display.html#88-92" title="Go to source code">activateBC</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deactivateBC" id="_deactivateBC">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deactivateBC">#</a>
+		<code><a href="source-class-display.html#94-98" title="Go to source code">deactivateBC</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addBCpath" id="_addBCpath">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addBCpath">#</a>
+		<code><a href="source-class-display.html#100-112" title="Go to source code">addBCpath</a>( <span>mixed <var>$url</var></span>, <span>mixed <var>$name</var></span>, <span>mixed <var>$title</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$number</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="pageTitle" id="$pageTitle">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#9" title="Go to source code"><var>$pageTitle</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'Ingen overskrift'</span></code></td>
+		<td class="description"><div>
+			<a href="#$pageTitle" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="description" id="$description">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#10" title="Go to source code"><var>$description</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$description" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATUS_IGNORE" id="$STATUS_IGNORE">
+		<td class="attributes"><code>
+			public static 
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#13-16" title="Go to source code"><var>$STATUS_IGNORE</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$STATUS_IGNORE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Some static variables to define state of script</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Some static variables to define state of script</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATUS_GOOD" id="$STATUS_GOOD">
+		<td class="attributes"><code>
+			public static 
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#17" title="Go to source code"><var>$STATUS_GOOD</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#$STATUS_GOOD" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATUS_ERROR" id="$STATUS_ERROR">
+		<td class="attributes"><code>
+			public static 
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#18" title="Go to source code"><var>$STATUS_ERROR</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#$STATUS_ERROR" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATUS_WARNING" id="$STATUS_WARNING">
+		<td class="attributes"><code>
+			public static 
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#19" title="Go to source code"><var>$STATUS_WARNING</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">3</span></code></td>
+		<td class="description"><div>
+			<a href="#$STATUS_WARNING" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATUS_INFO" id="$STATUS_INFO">
+		<td class="attributes"><code>
+			public static 
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#20" title="Go to source code"><var>$STATUS_INFO</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">4</span></code></td>
+		<td class="description"><div>
+			<a href="#$STATUS_INFO" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="status" id="$status">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#22-25" title="Go to source code"><var>$status</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$status" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="breadCrumbs" id="$breadCrumbs">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#27-31" title="Go to source code"><var>$breadCrumbs</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$breadCrumbs" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>BreadCrumbs that show you where you are</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>BreadCrumbs that show you where you are</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="show_breadCrumbs" id="$show_breadCrumbs">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-display.html#33-37" title="Go to source code"><var>$show_breadCrumbs</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$show_breadCrumbs" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Show breadCrumbs or not</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Show breadCrumbs or not</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		registration API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

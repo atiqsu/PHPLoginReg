@@ -1,5 +1,7 @@
 <?php
 require './inc/startup.php';
+/* @var $VIS display */
+/* @var $settings settings */
 
 // Let's run some test to check if everything is running like it should
 
@@ -25,7 +27,10 @@ if (file_exists($settings->settingsFile()) && is_writable($settings->settingsFil
     $test['write_settings'] = false;
 }
 
+$VIS->pageTitle = 'System status';
+
 include HTML_START;
+
 ?>
 <h3>
     System-status

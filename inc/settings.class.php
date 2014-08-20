@@ -5,7 +5,7 @@
  *
  * @author alex
  */
-class Settings {
+class settings {
     public $url;
     public $local_path;
 
@@ -13,19 +13,6 @@ class Settings {
     public $mysql_user;
     public $mysql_pass;
     public $mysql_database;
-
-    public $caching = false;
-    public $caching_mappe = './cache';
-    public $caching_level = 0;
-    /*
-     * Level 0: Ingen caching
-     * Level 1: Caching hos nettleseren
-     * Level 2: Caching hos server, ikke nettleser
-     * Level 3: Caching b�de p� server og nettleser
-     */
-    public $caching_varighet = 1200; // Antall sekunder
-
-
 
     // $extra will be saved in a settings file
     public $extra = array();
@@ -94,6 +81,6 @@ class Settings {
 
 // Create the object!
 
-$settings = new Settings();
+$settings = new settings();
 // From now on, we can use the $settings to fetch settings.
 // Settings are set in settings.php

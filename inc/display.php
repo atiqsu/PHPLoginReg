@@ -6,7 +6,7 @@
  * @author alex
  */
 class display {
-    public $title = 'Ingen overskrift';
+    public $pageTitle = 'Ingen overskrift';
     public $description = '';
 
     /**
@@ -53,45 +53,6 @@ class display {
 
         }
         return '';
-    }
-
-
-    /**
-     * Redirecter brukeren dersom rettigheten ikke kan f�s tak i.
-     *
-     * Et eksempel p� bruk:
-     * <code>
-     * // Vi krever at man kan legge til en compo
-     * $VIS->krevRettighet('leggTilCompo');
-     * </code>
-     * 
-     * @global Innstillinger $innstillinger Innstillingene, brukes til � generere URL.
-     * @param string $rettighet Rettigheten som det er krevd at brukeren har. Sjekk tilganger.inc.php for rettighetene.
-     * @return boolean true dersom brukeren har rettigheten, vil redirecte og d� ellers
-     * @deprecated since version 0.1
-     */
-    public function krevRettighet ($rettighet = false) {
-        global $innstillinger;
-        try {
-            if (!Bruker::innloggetBruker() instanceof Bruker) {
-                throw new IkkeInnlogget();
-            }
-
-            if (($rettighet != false) && (!Bruker::kanGjore($rettighet))) {
-                throw new HarIkkeTilgang();
-            }
-            return true;
-        }
-
-        catch (IkkeInnlogget $e) {
-            $msg = MSG_INNLOGGING_PAKREVD;
-        }
-        catch (HarIkkeTilgang $e) {
-            $msg = MSG_IKKE_TILGANG;
-        }
-
-        header('Location: '.$innstillinger->url . '/logginn.php?msg='.$msg);
-        exit('Redirecter...');
     }
 
     public function createBreadCrumbs () {
@@ -152,9 +113,9 @@ class display {
 
 }
 
-// Lag visnings-objektet
+// Create the display object
 $VIS = new display();
 
-// Fyll inn ett element i br�dstien
+// Add a page into the breadCrumbs
 $VIS->addBCpath('index.php', 'MainPage', 'Start Page where you can blerg *Display.php*');
 $VIS->deactivateBC();

@@ -1,18 +1,21 @@
 <?php
+/*Include following ontop of every new page to access settings and VIS object*/
+/* @var $VIS display */
+/* @var $settings settings */
 
 /**
  * Starts sessions. We use this for moving data around our webpage.
  */
 session_start();
 
-require_once 'settings.class.php';
+require 'settings.class.php';
 
-require_once 'settings.php';
+require 'settings.php';
 
-require_once 'db.php';
+require 'db.php';
 
-require_once 'registration.php';
+require 'registration.php';
 
-require_once 'display.php';
+require 'display.php';
 
-require_once 'constant.php';
+require 'constant.php';

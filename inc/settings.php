@@ -1,4 +1,5 @@
 <?php
+/* @var $settings settings */
 
 /*
  * Configuration file for Login / Register Application
@@ -18,6 +19,7 @@
 
 $settings->local_path = '';
 
+
 /////////////////////////
 // MySQL Settings
 //
@@ -28,3 +30,39 @@ $settings->mysql_host = '127.0.0.1';
 ////
 // Username
 $settings->mysql_user = 'root';
+
+////
+// Password
+$settings->mysql_pass = 'pass';
+
+////
+// The databse were going to connect to
+$settings->mysql_database = 'fetlan';
+
+
+/////////////////////////
+// Extra, changeable settings
+//
+// These settings can be changed by the user,
+// Without using this file.
+// All admins can.
+// These are just the default settings incase we
+// Can't reach our /data/ folder
+//
+
+/////////////////////////
+// Title
+//
+// What is the name of the site? For example: Facebook, google, youtube etc etc.
+$settings->extra['title'] = 'Fetlan';
+
+
+////
+// End of settings file
+
+////
+// Fetch from settings file, if possible
+try {
+    $settings->getFromFile();
+}
+catch (Exception $e) {}

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class db | registration</title>
+
+	<script type="text/javascript" src="resources/combined.js?1644104381"></script>
+	<script type="text/javascript" src="elementlist.js?4158915924"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-db.html">db</a></li>
+				<li><a href="class-display.html">display</a></li>
+				<li><a href="class-registration.html">registration</a></li>
+				<li><a href="class-settings.html">settings</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class db</h1>
+
+
+	<div class="description">
+	
+<p>Class for database communication</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-registration.html">registration</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>Author:</b>
+				Alexander Aasebø &lt;<a
+href="mailto:alexander&#64;aasebo.net">alexander&#64;<!---->aasebo.net</a>&gt;<br />
+				<b>Version:</b>
+				0.1<br />
+		<b>Located at</b> <a href="source-class-db.html#2-132" title="Go to source code">inc/db.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-db.html#34-57" title="Go to source code">__construct</a>( <span>MixedString <var>$dsn</var></span>, <span>String <var>$dbuser</var></span>, <span>String <var>$dbpass</var></span>, <span>boolean <var>$connect</var> = <span class="php-keyword1">true</span></span>, <span>Array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Class for database communication</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class for database communication</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dsn</var></dt>
+					<dd><code>MixedString</code><br>$dsn Used to specify which driver to use, which db to user and which host.<br />
+Example: $dsn="mysql:dbname=DBNAME;Host=127.0.0.1";</dd>
+					<dt><var>$dbuser</var></dt>
+					<dd><code>String</code><br>$dbuser Which database user to user</dd>
+					<dt><var>$dbpass</var></dt>
+					<dd><code>String</code><br>$dbpass Password for database user</dd>
+					<dt><var>$connect</var></dt>
+					<dd><code>boolean</code><br>$connect If set to true, class creates a database connection when instanciated,
+if fales it stores provided credentials</dd>
+					<dt><var>$options</var></dt>
+					<dd><code>Array</code><br>$options [Optonal]</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+			PDOStatementObject
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-class-db.html#58-65" title="Go to source code">query</a>( <span>string <var>$query</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query</var></dt>
+					<dd><code>string</code><br>$query Query to t be run through the database</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>PDOStatementObject</code><br>Returns an object of whats being querried<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close_connection" id="_close_connection">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close_connection">#</a>
+		<code><a href="source-class-db.html#66-73" title="Go to source code">close_connection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Closes the database connection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Closes the database connection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="open_connection" id="_open_connection">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_open_connection">#</a>
+		<code><a href="source-class-db.html#74-87" title="Go to source code">open_connection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Opens the database connection with credentials set in the class</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Opens the database connection with credentials set in the class</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="change_credentials" id="_change_credentials">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_change_credentials">#</a>
+		<code><a href="source-class-db.html#88-105" title="Go to source code">change_credentials</a>( <span>string <var>$dsn</var></span>, <span>string <var>$dbuser</var></span>, <span>string <var>$dbpass</var></span>, <span>mixed <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Changes the credentials to use with the database</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Changes the credentials to use with the database</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dsn</var></dt>
+					<dd><code>string</code><br>$dsn Used to specify which driver to use, which db to user and which host.<br />
+Example: $dsn="mysql:dbname=DBNAME;Host=127.0.0.1";</dd>
+					<dt><var>$dbuser</var></dt>
+					<dd><code>string</code><br>$dbuser Which database user to user</dd>
+					<dt><var>$dbpass</var></dt>
+					<dd><code>string</code><br>$dbpass Password for database user</dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepare" id="_prepare">
+
+		<td class="attributes"><code>
+			 public 
+			PDOStatementObject
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepare">#</a>
+		<code><a href="source-class-db.html#106-113" title="Go to source code">prepare</a>( <span>string <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+<p>prepares a SQL string for database insertion</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>prepares a SQL string for database insertion</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>$sql SQL String to prepare in for database insertion</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>PDOStatementObject</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lastInsertId" id="_lastInsertId">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_lastInsertId">#</a>
+		<code><a href="source-class-db.html#114-120" title="Go to source code">lastInsertId</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the Id of the last inserted row</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the Id of the last inserted row</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>Id of last inserted row<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="checkConnection" id="_checkConnection">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_checkConnection">#</a>
+		<code><a href="source-class-db.html#122-131" title="Go to source code">checkConnection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns true if PDO is created / False if not</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if PDO is created / False if not</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True if connected, False is not<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="PDO_" id="$PDO_">
+		<td class="attributes"><code>
+			protected  
+			PDOObject
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-db.html#9-13" title="Go to source code"><var>$PDO_</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$PDO_" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>PHP Data Object Object. Used for database communication</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>PHP Data Object Object. Used for database communication</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dsn" id="$dsn">
+		<td class="attributes"><code>
+			protected  
+			MixedString
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-db.html#14-18" title="Go to source code"><var>$dsn</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$dsn" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Used to specify which driver to use, which db to user and which host.<br />
+Example: $dsn="mysql:dbname=DBNAME;Host=127.0.0.1";</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Used to specify which driver to use, which db to user and which host.<br />
+Example: $dsn="mysql:dbname=DBNAME;Host=127.0.0.1";</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dbuser" id="$dbuser">
+		<td class="attributes"><code>
+			protected  
+			String
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-db.html#19-23" title="Go to source code"><var>$dbuser</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$dbuser" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Which database user to user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Which database user to user</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="dbpass" id="$dbpass">
+		<td class="attributes"><code>
+			protected  
+			String
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-db.html#24-28" title="Go to source code"><var>$dbpass</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$dbpass" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Password for database user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Password for database user</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="options" id="$options">
+		<td class="attributes"><code>
+			protected  
+			Array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-db.html#29-33" title="Go to source code"><var>$options</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$options" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Options for PDO [Optional]</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Options for PDO [Optional]</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		registration API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
