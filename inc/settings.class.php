@@ -16,23 +16,16 @@ class settings {
 
     // $extra will be saved in a settings file
     public $extra = array();
-    protected $settings_file = '/data/settings';
+    protected $settings_file = './data/settings';
 
 
 
     public function __construct () {
-        // Set standard-settings
-
+        // Set standard-setting
         // Find url
         $host  = $_SERVER['HTTP_HOST'];
         $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         $this->url = 'http://' . $host.$uri;
-
-
-
-
-
-
     }
 
     public function getFromFile() {

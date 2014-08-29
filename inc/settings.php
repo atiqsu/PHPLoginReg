@@ -17,7 +17,7 @@
 // A absolute path, without the last /
 // Example: '/var/www/clients/client1/web1/web'
 
-$settings->local_path = '';
+$settings->local_path = 'D:/wamp/www/registration';
 
 
 /////////////////////////

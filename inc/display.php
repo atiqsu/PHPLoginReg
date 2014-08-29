@@ -10,7 +10,7 @@ class display {
     public $description = '';
 
     /**
-     * Some static variables to define state of script
+     * Some static variables to define the state of our script
      */
     
     public static $STATUS_IGNORE = 0;
@@ -117,5 +117,5 @@ class display {
 $VIS = new display();
 
 // Add a page into the breadCrumbs
-$VIS->addBCpath('index.php', 'MainPage', 'Start Page where you can blerg *Display.php*');
+$VIS->addBCpath('index.php', 'Home', 'Start Page where you have an overview of everything *Display.php*');
 $VIS->deactivateBC();

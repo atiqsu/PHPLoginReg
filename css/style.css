@@ -17,3 +17,37 @@ However, this blank file is available if you prefer
     color: red;
     font-weight: bold;
 }
+
+.shaded {
+    background-color: #f2f2f2 !important;
+}
+
+/* status_feltet */
+div#statusfield, .status {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 5px;
+    width: 98%;
+    margin: 4px;
+}
+div#statusfield img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+div.status_warning {
+    border-color: #FFC96B;
+    background-color: #FFE8BF;
+}
+div.status_error {
+    border-color: #C30000;
+    background-color: #FFC1C1;
+}
+div.status_info {
+    border-color: #3F4AE2;
+    background-color: #C1C6FF;
+}
+div.status_good {
+    border-color: #00831A;
+    background-color: #ABE9B7;
+}

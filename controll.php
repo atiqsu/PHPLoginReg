@@ -48,7 +48,7 @@ echo $test['settings_file'] ? "<span class='test_yes'>Yes!</span>"
         : "<span class='test_warning'>No!</span>"; ?></h4>
 <?php if (!$test['settings_file']) { ?>
 <p>This is not a critical problem, sinse we will use the Standard settings </p>
-<p>It would however be wise to check your settings.</p>
+<p>However it would be wise to check your settings.</p>
 <?php } else { ?>
 <h4>Is the settings file writeable: <?php
 echo $test['write_settings'] ? "<span class='test_yes'>Yes!</span>"

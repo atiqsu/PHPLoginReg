@@ -1,5 +1,5 @@
 <?php
-/*Include following ontop of every new page to access settings and VIS object*/
+/*Include following ontop of every new page to access settings and VIS object's documentation*/
 /* @var $VIS display */
 /* @var $settings settings */
 
@@ -19,3 +19,7 @@ require 'registration.php';
 require 'display.php';
 
 require 'constant.php';
+
+require 'exceptions.php';
+
+require 'user.php';
