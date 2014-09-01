@@ -20,7 +20,14 @@
                     </h2>
                 </div>
                 <div class="six columns">
-                    
+                    <?php
+                    if(user::loggedinUser() instanceof user){
+                        $loggedinUser = user::loggedinUser();
+                        echo "Welcome {$loggedinUser->username}";
+                    } elseif($settings->show_login_link){
+                        ?><a href="login.php">Login</a><?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

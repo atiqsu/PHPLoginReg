@@ -56,6 +56,10 @@ $settings->mysql_database = 'fetlan';
 // What is the name of the site? For example: Facebook, google, youtube etc etc.
 $settings->extra['title'] = 'Fetlan';
 
+////
+//Show login link?
+$settings->extra['show_login_link'] = true;
+
 
 ////
 // End of settings file
