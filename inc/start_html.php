@@ -16,21 +16,33 @@
             <div class="row">
                 <div class="six columns">
                     <h2>
-                        <?php echo $settings->title; ?>
+                        <?php echo $settings->title;
+                        if($VIS->pageTitle != 'Error'){
+                            echo " :: " . $VIS->pageTitle;
+                        } ?>
                     </h2>
                 </div>
-                <div class="six columns">
-                    <?php
-                    if(user::loggedinUser() instanceof user){
-                        $loggedinUser = user::loggedinUser();
-                        echo "Welcome {$loggedinUser->username}";
-                    } elseif($settings->show_login_link){
-                        ?><a href="login.php">Login</a><?php
-                    }
-                    ?>
+                <div class="six columns" id="nav">
+                    <ul>
+                        <li><a href="<?php echo $settings->url; ?>/index.php">Home</a></li>
+                        <?php
+                        if(user::loggedinUser(false, $settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass) instanceof user){
+                            $loggedinUser = user::loggedinUser(false, $settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass);
+                            echo "<li><a href='logout.php'>Logout from <b>{$loggedinUser->fields->username}</b></a></li>";
+                        } else {
+                            ?><li><a href="login.php">Login</a></li><?php
+                        }
+                        ?>
+                    </ul>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="twelve columns">
+                <span> <?php echo $VIS->description; ?></span>
+            </div>
+        </div>
+        
         <div class="row">
             <div class="twelve columns">
                 <?php $VIS->createBreadCrumbs(); ?>
@@ -46,6 +58,16 @@
                     case MSG_REGISTRATED:
                         $VIS->status = display::$STATUS_GOOD;
                         $VIS->message = 'You have been registrated.';
+                        break;
+                    
+                    case MSG_LOGGED_IN:
+                        $VIS->status = display::$STATUS_INFO;
+                        $VIS->message = 'You have been logged in.';
+                        break;
+                    
+                    case MSG_LOGGED_OUT:
+                        $VIS->status = display::$STATUS_INFO;
+                        $VIS->message = 'You have been logged out.';
                         break;
                 }
             }
@@ -88,4 +110,4 @@
             ?>
             </div>
         </div>
-        <div class="row">
+    <div class="row">

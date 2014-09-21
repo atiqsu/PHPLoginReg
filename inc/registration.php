@@ -44,7 +44,7 @@ class registration extends db{
     }
     
     public function registrate($user){
-        $registration = $this->prepare("INSERT INTO users (username, password, email, name, salt, joined) VALUES (:username, :password, :email, :name, :salt, now() )");
+        $registration = $this->prepare("INSERT INTO users (username, pass, email, name, salt, joined) VALUES (:username, :password, :email, :name, :salt, now() )");
         
         $username = $user['username'];
         $password = $user['password'];
@@ -52,7 +52,7 @@ class registration extends db{
         $name = $user['fname'] . " " . $user['lname'];
         
         $salt = uniqid(mt_rand(), true);
-        $hash = sha1($password + $salt);
+        $hash = sha1($password . $salt);
         
         $registration->execute(array(
             ":username" => $username,

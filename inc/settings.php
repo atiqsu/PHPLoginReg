@@ -23,9 +23,18 @@ $settings->local_path = 'D:/wamp/www/registration';
 /////////////////////////
 // MySQL Settings
 //
+
 ////
-// Host-name
+// The databse were going to connect to
+$settings->mysql_database = 'dev';
+
+////
+// Database-Host
 $settings->mysql_host = '127.0.0.1';
+
+////
+// PDO dsn link
+$settings->mysql_dsn = 'mysql:dbname=' . $settings->mysql_database . ';host=' . $settings->mysql_host;
 
 ////
 // Username
@@ -34,10 +43,6 @@ $settings->mysql_user = 'root';
 ////
 // Password
 $settings->mysql_pass = 'pass';
-
-////
-// The databse were going to connect to
-$settings->mysql_database = 'fetlan';
 
 
 /////////////////////////
@@ -56,9 +61,7 @@ $settings->mysql_database = 'fetlan';
 // What is the name of the site? For example: Facebook, google, youtube etc etc.
 $settings->extra['title'] = 'Fetlan';
 
-////
-//Show login link?
-$settings->extra['show_login_link'] = true;
+
 
 
 ////

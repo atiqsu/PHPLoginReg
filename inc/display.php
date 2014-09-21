@@ -6,7 +6,7 @@
  * @author alex
  */
 class display {
-    public $pageTitle = 'Ingen overskrift';
+    public $pageTitle = 'Error';
     public $description = '';
 
     /**
@@ -56,7 +56,7 @@ class display {
     }
 
     public function createBreadCrumbs () {
-        // Is breadCrumbs aktivated?
+        // Is breadCrumbs activated?
         if (!$this->show_breadCrumbs) {
             return false;
         }

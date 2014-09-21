@@ -4,8 +4,8 @@ define('CRYPTING_SALT', 'I dont wanna sew');
 // MSG - Message codes
 define('MSG_REDIRECT',          crypt(1, CRYPTING_SALT));
 define('MSG_REGISTRATED',         crypt(2, CRYPTING_SALT));
-define('MSG_LOGGET_UT',         crypt(3, CRYPTING_SALT));
-define('MSG_LOGGET_INN',        crypt(4, CRYPTING_SALT));
+define('MSG_LOGGED_OUT',         crypt(3, CRYPTING_SALT));
+define('MSG_LOGGED_IN',        crypt(4, CRYPTING_SALT));
 define('MSG_INNLOGGING_PAKREVD',crypt(5, CRYPTING_SALT));
 define('MSG_IKKE_TILGANG',      crypt(6, CRYPTING_SALT));
 define('MSG_COMPO_OPPRETTET',   crypt(7, CRYPTING_SALT));

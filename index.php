@@ -3,5 +3,6 @@
 /* @var $settings settings */
 require './inc/startup.php';
 
-$VIS->activateBC();
+$VIS->pageTitle = "Home";
+
 include HTML_START;

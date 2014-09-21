@@ -121,7 +121,7 @@ class db {
     
     /**
      * Returns true if PDO is created / False if not
-     * @return boolean True if connected, False is not
+     * @return boolean True if connected, False if not
      */
     public function checkConnection(){
         if(!$this->PDO_){

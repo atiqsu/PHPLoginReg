@@ -9,6 +9,7 @@ class settings {
     public $url;
     public $local_path;
 
+    public $mysql_dsn;
     public $mysql_host;
     public $mysql_user;
     public $mysql_pass;

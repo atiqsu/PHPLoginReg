@@ -4,7 +4,11 @@
 require './inc/startup.php';
 
 try{
-    if(!isset($_POST['submitted']) && $_POST['submitted'] != 1){
+    if(!isset($_POST['submitted'])){
+        $user['email'] = "";
+        $user['fname'] = "";
+        $user['lname'] = "";
+        $user['username'] = "";
         throw new notSent();
     }
     $user = [];
@@ -79,10 +83,7 @@ try{
     /**
      * First, lets check if any of the credentials are already used.
      */
-    $dsn = "mysql:dbname=dev;host=127.0.0.1";
-    $dbuser = "root";
-    $dbpass = "pass";
-    $reg = new registration($dsn, $dbuser, $dbpass);
+    $reg = new registration($settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass);
     $validationError = $reg->checkUser($user);
     if (count($validationError) > 0){
         throw new dataError();
@@ -123,6 +124,7 @@ catch (notSent $e){
  }
 $VIS->addBCpath('registrate.php', 'Registration', 'This is where you can create a new user');
 $VIS->activateBC();
+$VIS->pageTitle = "Registration";
 include HTML_START;
 ?>
 <div class="six columns">
@@ -144,6 +146,9 @@ include HTML_START;
         </div>
         <div class="field">
             <input class="input" type="password" name="repassword" value="" placeholder="Repeat password" /> <br>
+        </div>
+        <div>
+            <a href="<?php echo $settings->url; ?>/login.php">Already registered?</a>
         </div>
         <div class="medium secondary btn">
             <input type="submit" value="Registrate" name="submit" />    
