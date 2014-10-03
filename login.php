@@ -21,7 +21,7 @@ if (isset($_POST['action'])) {
                 $user = new user(false, $settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass);
                 $login = $user->authenticateUser($_POST['username'], $_POST['password'], $rememberMe, $settings);
                 // Were logged in!
-                header('Location: '. $settings->url .'/index.php?msg='.MGS_LOGGED_IN);
+                header('Location: '. $settings->url .'/index.php?msg='.MSG_LOGGED_IN);
                 exit;
             break;
 
@@ -31,6 +31,10 @@ if (isset($_POST['action'])) {
         // combination of username and password not found in the database. Show error
         $VIS->status = display::$STATUS_ERROR;
         $VIS->message = 'Wrong username or password.';
+    }
+    catch (notActivated $e){
+        header('Location: '. $settings->url . '/activate.php?msg='.MSG_ACTIVATE_FIRST);
+        die('Before logging in, you need to activate your user, redirecting....');
     }
 }
 

@@ -44,7 +44,7 @@ class registration extends db{
     }
     
     public function registrate($user){
-        $registration = $this->prepare("INSERT INTO users (username, pass, email, name, salt, joined) VALUES (:username, :password, :email, :name, :salt, now() )");
+        $registration = $this->prepare("INSERT INTO users (username, pass, email, name, salt, joined, activationhash) VALUES (:username, :password, :email, :name, :salt, now(), :activationhash )");
         
         $username = $user['username'];
         $password = $user['password'];
@@ -54,15 +54,21 @@ class registration extends db{
         $salt = uniqid(mt_rand(), true);
         $hash = sha1($password . $salt);
         
+        $activationhash = uniqid(mt_rand(), true);
+        
         $registration->execute(array(
             ":username" => $username,
             ":password" => $hash,
             ":email" => $email,
             ":name" => $name,
             ":salt" => $salt,
+            ":activationhash" => $activationhash,
         ));
         
         if($registration->rowCount() > 0 ){
+            
+            // TODO: Send email to user
+            
             return true;
         } else {
             return false;

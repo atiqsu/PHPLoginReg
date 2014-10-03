@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php echo $VIS->pageTitle . ' :: ' . $settings->title; ?></title>
+        <title><?php echo $settings->title . ' :: ' . $VIS->pageTitle; ?></title>
         <meta charset="ISO-8859-15">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/gumby.css">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="six columns" id="nav">
                     <ul>
-                        <li><a href="<?php echo $settings->url; ?>/index.php">Home</a></li>
+                        <li><a href="<?php echo $settings->url; ?>/index.php" <?php $VIS->nav("index.php"); ?>>Home</a></li>
                         <?php
                         if(user::loggedinUser(false, $settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass) instanceof user){
                             $loggedinUser = user::loggedinUser(false, $settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass);
@@ -33,6 +33,7 @@
                             ?><li><a href="login.php">Login</a></li><?php
                         }
                         ?>
+                        <li><a href="#">Compoer</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,7 +46,6 @@
         
         <div class="row">
             <div class="twelve columns">
-                <?php $VIS->createBreadCrumbs(); ?>
                 <?php
                 if (isset($_GET['msg'])) {
                 switch ($_GET['msg']) {
@@ -57,18 +57,28 @@
                     
                     case MSG_REGISTRATED:
                         $VIS->status = display::$STATUS_GOOD;
-                        $VIS->message = 'You have been registrated.';
+                        $VIS->message = 'You have been registrated. <br> Activation link sent to your email';
                         break;
                     
                     case MSG_LOGGED_IN:
-                        $VIS->status = display::$STATUS_INFO;
+                        $VIS->status = display::$STATUS_GOOD;
                         $VIS->message = 'You have been logged in.';
                         break;
                     
                     case MSG_LOGGED_OUT:
-                        $VIS->status = display::$STATUS_INFO;
+                        $VIS->status = display::$STATUS_GOOD;
                         $VIS->message = 'You have been logged out.';
                         break;
+                    
+                    case MSG_ACTIVATED:
+                        $VIS->status = display::$STATUS_GOOD;
+                        $VIS->message = 'You have been activated.';
+                        break;
+                    
+                    case MSG_ACTIVATE_FIRST:
+                        $VIS->status = display::$STATUS_WARNING;
+                        $VIS->message = 'You need to activate your user before logging in.';
+                        
                 }
             }
             
@@ -107,6 +117,7 @@
                 </div>
                 <?php
             }
+            $VIS->createBreadCrumbs();
             ?>
             </div>
         </div>

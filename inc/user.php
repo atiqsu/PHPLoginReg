@@ -6,10 +6,41 @@
  * @version 0.1
  */
 class user extends db {
+    /**
+     * PHP Data Object Object. Used for database communication
+     * @var PDOObject 
+     */
+    protected $PDO_;
+    /**
+     * Used to specify which driver to use, which db to user and which host. <br> Example: $dsn="mysql:dbname=DBNAME;Host=127.0.0.1";
+     * @var MixedString 
+     */
+    protected $dsn;
+    /**
+     * Which database user to user
+     * @var String 
+     */
+    protected $dbuser;
+    /**
+     * Password for database user
+     * @var String 
+     */
+    protected $dbpass;
+    /**
+     * Options for PDO [Optional]
+     * @var Array 
+     */
+    protected $options;
+    
     protected static $loggedinUser;
     
     public function __construct($id = false, $dsn, $dbuser, $dbpass, $connect = true, $options = array()) {
         parent::__construct($dsn, $dbuser, $dbpass, $connect, $options);
+        
+        $this->dsn = $dsn;
+        $this->dbuser = $dbuser;
+        $this->dbpass = $dbpass;
+        
         if(!$id){
             return;
         }
@@ -17,9 +48,12 @@ class user extends db {
         /**
          * Fetch user information from database
          */
-        $result = $this->query("SELECT * FROM users WHERE id='" . $id . "' LIMIT 1", PDO::FETCH_OBJ);
+        $result = $this->prepare("SELECT * FROM users WHERE id=? LIMIT 1");
         
-        $this->id = $id;
+        $result->execute(array(
+            $id,
+        ));
+        
         $this->fields = $result->fetch(PDO::FETCH_OBJ);
         $this->fields->pass = false;
         return;
@@ -73,6 +107,11 @@ class user extends db {
             throw new notAuthorized('User not authorized');
         }
         $row = $login->fetch(PDO::FETCH_OBJ);
+        
+        if ($row->activated == 0){
+            throw new notActivated();
+        }
+        
         $id = $row->id;
         // Put user ID into a session, so we know were logged in
         $_SESSION['loggedin_id'] = $id;
@@ -82,6 +121,9 @@ class user extends db {
             setcookie('user_rememberme', $id, time()+60*60*24*3);
         }
         $this->close_connection();
+        echo "<pre>";
+        print_r($this);
+        echo "</pre>";
         return new user($id, $this->dsn, $this->dbuser, $this->dbpass);
     }
     

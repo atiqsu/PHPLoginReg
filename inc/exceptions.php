@@ -19,3 +19,8 @@ class databaseError extends Exception {}
  * Exception for when a users username or password does not match with anything in the database.
  */
 class notAuthorized extends Exception {}
+
+/**
+ * Exception for when a user tries to activate the user but it fails.
+ */
+class notActivated extends Exception {}

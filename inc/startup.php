@@ -24,6 +24,8 @@ require 'exceptions.php';
 
 require 'user.php';
 
+require 'activation.php';
+
 
 //Lets activate breadcrumbs as a default thing.
 $VIS->activateBC();
