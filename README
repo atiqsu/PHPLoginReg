@@ -1,1 +1,10 @@
-Object Oriented Login and Registration system.
+This system is Object oriented.
+
+It features:
+Login
+Registration
+Activation
+Change password
+Forgot password
+Control page (Can we write to the data folder? Does the settings file exists etc.)
+Seating module (Reserve a seat for an event)
