@@ -26,6 +26,8 @@ require 'user.php';
 
 require 'activation.php';
 
+require 'password.php';
+
 
 //Lets activate breadcrumbs as a default thing.
 $VIS->activateBC();

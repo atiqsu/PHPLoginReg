@@ -86,6 +86,9 @@ include HTML_START;
         <div>
             <a href="<?php echo $settings->url;?>/registrate.php">Not registered?</a>
         </div>
+        <div>
+            <a href="<?php echo $settings->url;?>/forgotpass.php">Forgot password?</a>
+        </div>
         <div class="medium secondary btn">
             <input type="submit" value="Login" name="submitting" />    
         </div>

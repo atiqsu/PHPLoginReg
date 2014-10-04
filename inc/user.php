@@ -121,9 +121,6 @@ class user extends db {
             setcookie('user_rememberme', $id, time()+60*60*24*3);
         }
         $this->close_connection();
-        echo "<pre>";
-        print_r($this);
-        echo "</pre>";
         return new user($id, $this->dsn, $this->dbuser, $this->dbpass);
     }
     

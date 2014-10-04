@@ -28,9 +28,11 @@
                         <?php
                         if(user::loggedinUser(false, $settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass) instanceof user){
                             $loggedinUser = user::loggedinUser(false, $settings->mysql_dsn, $settings->mysql_user, $settings->mysql_pass);
-                            echo "<li><a href='logout.php'>Logout from <b>{$loggedinUser->fields->username}</b></a></li>";
+                            echo "<li><a href='logout.php'>Logout from <b>{$loggedinUser->fields->username}</b></a></li>"; ?>
+                        <li><a href="changepass.php">Change pass</a></li>
+                        <?php
                         } else {
-                            ?><li><a href="login.php">Login</a></li><?php
+                            ?><li><a href="login.php">Login</a> &nbsp; <a href="registrate.php">(Need a user?)</a></li><?php
                         }
                         ?>
                         <li><a href="#">Compoer</a></li>
@@ -78,7 +80,17 @@
                     case MSG_ACTIVATE_FIRST:
                         $VIS->status = display::$STATUS_WARNING;
                         $VIS->message = 'You need to activate your user before logging in.';
-                        
+                        break;
+                    
+                    case MSG_PASSWORD_RESET:
+                        $VIS->status = display::$STATUS_GOOD;
+                        $VIS->message = 'Your password is reset! Check email for new password.';
+                        break;
+                    
+                    case MSG_LOGIN_FIRST_CHANGEPASS:
+                        $VIS->status = display::$STATUS_INFO;
+                        $VIS->message = 'Please login before trying to change your password.';
+                        break;
                 }
             }
             

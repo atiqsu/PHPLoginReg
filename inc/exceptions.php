@@ -24,3 +24,8 @@ class notAuthorized extends Exception {}
  * Exception for when a user tries to activate the user but it fails.
  */
 class notActivated extends Exception {}
+
+/**
+ * Exception for when a user tries to reset his/her password but it fails.
+ */
+class notReset extends Exception {}
